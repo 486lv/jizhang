@@ -20,8 +20,11 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0' # 也可以改成你本地的版本
+          flutter-version: '3.24.0' # 更新到较新版本以支持新的Android embedding
           channel: 'stable'
+
+      - name: Clean
+        run: flutter clean
 
       - name: Install dependencies
         run: flutter pub get
